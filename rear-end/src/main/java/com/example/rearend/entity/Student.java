@@ -17,19 +17,14 @@ public class Student {
 	private String studentID;
 	private String name;
 	private String gender;
+	private Boolean confirmed=false;  //是否被确认指导，默认否
 	private String contactInformation;
 	@OneToMany(mappedBy = "student")       //和课程之间的关系
     private List<Course>  completedCourses;     //已修课程；
-	@OneToMany(mappedBy = "student")      //和导师之间的关系
-	private List<MajorFieldLeaning>  majorFieldLeaning;   //专业方向；
-	@ManyToOne
+	@OneToMany(mappedBy = "student")
+	private List<MajorFieldLeaning>  majorFieldLeanings;   //专业方向；
+	@ManyToOne					//和导师之间的关系
 	private Teacher teacher;
 
-	public Student(String studentID,String name,String gender,String contactInformation){
-		this.studentID=studentID;
-		this.name=name;
-		this.gender=gender;
-		this.contactInformation=contactInformation;
 
-	}
 }
