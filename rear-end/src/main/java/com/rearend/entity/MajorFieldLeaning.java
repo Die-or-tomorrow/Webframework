@@ -1,4 +1,4 @@
-package com.example.rearend.entity;
+package com.rearend.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.example.rearend.entity;
+package com.rearend.entity;
 
 import lombok.Data;
 
@@ -16,6 +16,6 @@ public class Course {
 	@ManyToOne
 	private Teacher teacher;
 	private int grades;
-	private int weighting;   //老师设置加权，最大总和为1；
+	private float weighting;   //老师设置加权，最大总和为1；
 	private int accpetTheLowestGrade;  //老师设置最低分
 }
